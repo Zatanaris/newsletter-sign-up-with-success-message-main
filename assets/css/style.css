@@ -1,0 +1,172 @@
+.container-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.6rem;
+    width: min(720px, 100%);
+    background-color: var(--white);
+    border-radius: 1.2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (width <= 475px) {
+    .container-form {
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    picture {
+        order: 1;
+    }
+}
+
+.content {
+    display: grid;
+    padding: 1.6rem;
+    gap: 1.6rem;
+}
+
+.title {
+    font-size: clamp(3rem, 4vw, 4.2rem);
+    font-weight: 700;
+    color: var(--titleColors);
+}
+
+.description {
+    font-size: clamp(1.5rem, 2.5vw, 1.6rem);
+    font-weight: 400;
+    color: var(--textColors);
+    line-height: 1.1;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-block: 8px;
+}
+
+.list li i {
+    color: var(--tomato);
+    font-size: 20px;
+}
+
+.list li p {
+    font-size: 14px;
+    color: var(--titleColors);
+    font-weight: 400;
+}
+
+.form {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.form--control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.label--control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label--control label {
+    font-size: var(--labelText);
+    font-weight: 700;
+    color: var(--titleColors);
+}
+
+.label--control p {
+    font-size: var(--labelText);
+    font-weight: 700;
+}
+
+.form--control input {
+    padding: 1rem 1.4rem;
+    border: 1px solid var(--InputBorder);
+    border-radius: 8px;
+    outline: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--titleColors);
+}
+
+.form--control input:is(:hover, :focus) {
+    border-color: #000;
+}
+
+.form--control input.error {
+    border-color: var(--tomato);
+}
+
+.btn {
+    background-color: var(--titleColors);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding-block: 1rem;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--tomato);
+}
+
+.sucess-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: min(375px, 100%);
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+}
+
+@media (width <= 375px) {
+    .sucess-content {
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+
+    .sucess-content .btn {
+        margin-top: auto;
+    }
+}
+
+.sucess-content div {
+    font-size: 60px;
+    color: var(--tomato);
+}
+
+.title-secess {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--titleColors);
+    line-height: 1.1;
+}
+
+.confirmation {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--textColors);
+
+    & span {
+        font-weight: 700;
+        color: #000;
+    }
+}

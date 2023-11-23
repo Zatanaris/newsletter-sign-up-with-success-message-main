@@ -1,0 +1,67 @@
+:root {
+    font-size: 62.5%;
+
+    --tomato: hsl(4, 100%, 67%);
+    --titleColors: hsl(234, 29%, 20%);
+    --textColors: hsl(235, 18%, 26%);
+    --InputBorder: hsla(240, 3%, 73%, 0.986);
+    --white: hsl(0, 0%, 100%);
+
+    --labelText: clamp(1.3rem, 3vw, 1.4rem);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--titleColors);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.hide {
+    display: none !important;
+}
+.error {
+    color: var(--tomato);
+    border-color: var(--tomato);
+}
