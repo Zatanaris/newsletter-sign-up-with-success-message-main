@@ -18,6 +18,8 @@ form.addEventListener("submit", (e) => {
         RegisterContent.classList.toggle("hide");
         SussesContaint.classList.toggle("hide");
         emailUser.innerHTML = InputValue;
+        error.classList.add("hide");
+        Input.classList.remove("error");
     }
 });
 
